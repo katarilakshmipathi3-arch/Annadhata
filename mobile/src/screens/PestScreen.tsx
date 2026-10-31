@@ -85,7 +85,7 @@ export default function PestScreen({ navigation }: any) {
             <View style={styles.pestIconCircle}>
               <MaterialIcons name="bug-report" size={28} color={Colors.primaryDeep} />
             </View>
-            <Text style={styles.actionCardTitle}>{t('best_choice', 'Best Choice')}</Text>
+            <Text style={styles.actionCardTitle}>{t('pest_scanner', 'Pest Scan')}</Text>
             <Text style={styles.actionCardDesc}>
               {t('pest_scanner_desc', 'Scan a leaf or crop problem for instant diagnosis')}
             </Text>

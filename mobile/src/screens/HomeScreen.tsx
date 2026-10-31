@@ -303,11 +303,11 @@ function HomeScreen({ navigation }: any) {
       haptic: 'medium' as const,
     },
     {
-      label: t('action_smart_move', 'Smart Move'),
-      icon: 'trending-up',
+      label: t('pest_scanner', 'Pest Scan'),
+      icon: 'bug-report',
       bgTint: '#FEF3C7',
       iconColor: '#D97706',
-      screen: 'SmartMove',
+      screen: 'PestScan',
       haptic: 'medium' as const,
     },
   ];

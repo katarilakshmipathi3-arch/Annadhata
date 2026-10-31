@@ -13,7 +13,7 @@ import { Colors, FontFamily, Shadows } from '../constants/theme';
 
 const Tab = createBottomTabNavigator();
 const icons: Record<string, keyof typeof MaterialIcons.glyphMap> = {
-  Home: 'home', 'Pest & Soil': 'eco', Scan: 'qr-code-scanner',
+  Home: 'home', 'Pest & Soil': 'bug-report', 'Pest Scan': 'bug-report', Scan: 'qr-code-scanner',
   'Smart Move': 'local-shipping', Market: 'storefront',
 };
 
@@ -86,7 +86,7 @@ export default function BottomTabs() {
   return (
     <Tab.Navigator initialRouteName="Home" tabBar={(props) => <DockBar {...props} />} screenOptions={{ headerShown: false }}>
       <Tab.Screen name="Home" component={HomeScreen} options={{ tabBarLabel: t('tab_home', 'Home') }} />
-      <Tab.Screen name="Pest & Soil" component={PestScreen} options={{ tabBarLabel: t('tab_crops', 'Pest & Soil') }} />
+      <Tab.Screen name="Pest & Soil" component={PestScreen} options={{ tabBarLabel: t('pest_scanner', 'Pest Scan') }} />
       <Tab.Screen name="Scan" component={ScanScreen} options={{ tabBarLabel: t('tab_scan', 'Scan') }} />
       <Tab.Screen name="Smart Move" component={SmartMoveScreen} options={{ tabBarLabel: t('tab_smart_move', 'Smart Move') }} />
       <Tab.Screen name="Market" component={MarketScreen} options={{ tabBarLabel: t('tab_market', 'Market') }} />
