@@ -8,7 +8,7 @@
     "android": "npm --prefix mobile run android --",
     "ios": "npm --prefix mobile run ios --",
     "web": "npm --prefix mobile run web --",
-    "build:web": "npm --prefix mobile run export:web",
+    "build:web": "npm --prefix mobile run export:web && node scripts/copy-web-pwa-assets.js",
     "backend": ".venv\\Scripts\\python.exe -m uvicorn main:app --app-dir backend --host 0.0.0.0 --port 8000 --reload",
     "serve": "npm run backend"
   },

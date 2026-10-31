@@ -54,7 +54,6 @@
     },
     "owner": "shahid078",
     "web": {
-      "favicon": "./public/icons/icon-192.png",
       "bundler": "metro",
       "name": "Annapurna FreshGuard \u2014 The Farmer Market",
       "shortName": "Annapurna",

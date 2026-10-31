@@ -11,7 +11,18 @@ import Constants from 'expo-constants';
 function resolveBaseUrl(): string {
   // 1. Explicit env var takes highest priority
   const envUrl = (globalThis as any).__EXPO_PUBLIC_API_URL ?? process.env.EXPO_PUBLIC_API_URL;
-  if (envUrl) return envUrl.replace(/\/+$/, ''); // strip trailing slashes
+  if (envUrl) {
+    const configuredUrl = envUrl.replace(/\/+$/, '');
+    if (
+      Platform.OS === 'web' &&
+      typeof window !== 'undefined' &&
+      window.location.protocol === 'https:' &&
+      /^http:\/\//i.test(configuredUrl)
+    ) {
+      return window.location.origin;
+    }
+    return configuredUrl;
+  }
 
   // 2. Web browser: use current host / origin
   if (Platform.OS === 'web') {

@@ -1,5 +1,8 @@
 {
   "version": 2,
+  "installCommand": "npm --prefix mobile ci",
+  "buildCommand": "npm run build:web",
+  "outputDirectory": "mobile/dist",
   "rewrites": [
     {
       "source": "/api/:path*",
